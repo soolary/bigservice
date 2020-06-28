@@ -5,8 +5,8 @@ module.exports = (sql, parms = null) => {
         const conn = mysql.createConnection({
             host: 'localhost',
             user: 'root',
-            password: 'soola',
-            database: 'nodewin'
+            password: '770499571',
+            database: 'node'
         });
         conn.connect();
         conn.query(sql, parms, (err, result) => {

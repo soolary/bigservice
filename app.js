@@ -1,10 +1,13 @@
 const koa = require('koa');
 const bodyParser = require('koa-bodyparser')
+const koaJWT = require('koa-jwt')
 const Router = require('koa-router')
 const router = new Router()
 const app = new koa();
-const cors = require('koa2-cors')
+const cors = require('koa2-cors');
 app.use(cors());
+app.use(koaJWT({ secret: 'bigevent' }).unless({ path: /^\/api/ }))
+
 // app.use(async (ctx, next) => {
 //     ctx.set('Assess-Control-Allow-Origin', '*');
 //     next()
