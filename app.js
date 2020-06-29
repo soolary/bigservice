@@ -5,7 +5,7 @@ const errorHandler = require('./routers/error')
 const Router = require('koa-router')
 const router = new Router()
 const app = new koa();
-errorHandler(app)//错误处理
+// errorHandler(app)//错误处理
 const cors = require('koa2-cors');
 app.use(cors({
     // origin: '*',
