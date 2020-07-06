@@ -11,13 +11,15 @@
   "dependencies": {
     "jsonwebtoken": "^8.5.1",
     "koa": "^2.12.1",
+    "koa-body": "^4.2.0",
     "koa-bodyparser": "^4.3.0",
     "koa-jwt": "^4.0.0",
-    "koa-multer": "^1.0.2",
     "koa-router": "^9.0.1",
     "koa2-cors": "^2.0.6",
     "moment": "^2.27.0",
+    "multiparty": "^4.2.1",
     "mysql": "^2.18.1",
+    "util": "^0.12.3",
     "utility": "^1.16.3"
   }
 }

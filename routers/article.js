@@ -1,6 +1,8 @@
 const Router = require('koa-router');
 const db = require('../db');
-const router = new Router()
+const router = new Router();
+const path = require('path')
+
 router.get('/list', async (ctx) => {
     let { pagenum, pagesize, cate_id, state } = ctx.query
     let w = '';
@@ -31,5 +33,10 @@ where author_id = ? and is_delete = ? ${w}`
             message: '获取文章列表数据失败'
         }
     }
+})
+router.post('/add', async ctx => {
+    console.log(ctx.request.file.fields);
+    console.log(ctx.request.body.files)
+
 })
 module.exports = router
